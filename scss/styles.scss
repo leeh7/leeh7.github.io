@@ -368,6 +368,45 @@ footer {
     }
 }
 
+/*==================Header titles animation=============================*/
+.animate-pop-in {
+  animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rotate-up {
+  100% {
+    transform: rotateZ(-4deg);
+  }
+}
+
+#lead:after {
+  animation: rotate-up .5s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  background: #F9FCFF;
+  opacity: 0.4;
+  content: "";
+  height: 20rem;
+  left: 0%;
+  position: absolute;
+    right: 5%;
+    top: 100%;
+    width: 100%;
+  transform-origin: 0 0;
+  z-index: 0;
+}
+/*==================~Header titles animation~=============================*/
+
 #lead-overlay {
     position: absolute;
     height: 100%;
