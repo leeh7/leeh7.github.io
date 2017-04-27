@@ -50,7 +50,7 @@ $text: #74808a;
 */
 
 @mixin transition($duration: 0.5s, $func: ease, $property: all) {
-    transition: #{$duration} #{$func} #{$property};
+    //transition: #{$duration} #{$func} #{$property};
 }
 
 @mixin placeholder {
@@ -937,10 +937,12 @@ footer {
     #lead-content {
         h1 {
             font-size: 1.5em;
+            animation-delay: 0.6s;
         }
 
         h2 {
             font-size: 1em;
+            animation-delay: 0.8s;
         }
 
         a {
