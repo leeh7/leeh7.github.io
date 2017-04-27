@@ -49,7 +49,7 @@ $text: #74808a;
     ---------------------
 */
 
-@mixin transition($duration: 0s, $func: ease, $property: all) {
+@mixin transition($duration: 0.5s, $func: ease, $property: all) {
     transition: #{$duration} #{$func} #{$property};
 }
 
