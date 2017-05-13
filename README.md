@@ -1,6 +1,6 @@
 # Dev Portfolio Template
 
-This repo contains an easy-to-customize personal tech portfolio template that is based off Sass and JavaScript. It is lightweight and fully responsive, as well as comes with the Bootstrap grid system and loaded with Font Awesome. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and scripts fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.
+This repo contains an easy-to-customize personal dev portfolio template that was created with Sass and JavaScript. It is lightweight and fully responsive, as well as comes with the Bootstrap grid system and loaded with Font Awesome. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and scripts fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.
 
 To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio-template/).
 
@@ -10,15 +10,45 @@ To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio-
 * Sass ready with lots of commenting
 * Fully responsive
 * Comes with Bootstrap grid system
-* Easy colour changes can be done through simply variable edits
+* Easy colour changes can be done through simple variable edits
+
+## Contents
+
+- [Setup and Configuration](#setup-and-configuration)
+    - [Making Edits / Customizing the Template](#making-edits--customizing-the-template)
+    - [Using the Template As Is](#using-the-template-as-is)
+- [Customization and Editing](#customization-and-editing)
+    - [General](#general)
+    - [Images](#images)
+    - [Header Section](#header-section)
+    - [Lead Section](#lead-section)
+    - [About Section](#about-section)
+    - [Experience Section](#experience-section)
+    - [Education Section](#education-section)
+    - [Projects Section](#projects-section)
+    - [Skills Section](#skills-section)
+    - [Contact Section](#contact-section)
+    - [Footer Section](#footer-section)
+- [Changelog](#changelog)
+- [License](#license)
 
 ## Setup and Configuration
 
-To setup, simply fork the repo and run `npm install` in order to get all the Gulp dev dependencies. Next, run `Gulp watch` to compile the Sass and minify the JavaScript. Any changes done to the JavaScript (js/scripts.js) or Sass (sass/styles.scss) will be autocompiled and ready to go.
+The setup required can be broken into two types:
+1. If you want to make edits or customize the template
+2. If you just want to add your information as use as is
 
-All scripts are within `js/scripts.js` and get minified to `js/scripts.min.js`.All styles are in `sass/styles.scss` and get compiled to `css/styles.css`. Both the minified scripts file and compiled CSS file are what is loaded on the page by default.
+### Making Edits / Customizing the Template
 
-At this point, the page is ready to go and you can begin to add your own information and make any needed changes. The next section contains a quick breakdown of each of the default sections and how they work.
+To setup, simply fork the repo and run `npm install` in order to get all the Gulp dev dependencies. Next, run `Gulp watch` to compile the Sass and minify the JavaScript. Alternatively, if you don't have Gulp installed globally, you can run the npm script `npm run watch`. Any changes done to the JavaScript (js/scripts.js) or Sass (sass/styles.scss) will be autocompiled and ready to go.
+
+All scripts are within `js/scripts.js` and get minified to `js/scripts.min.js`. All styles are in `sass/styles.scss` and get compiled to `css/styles.css`. Both the minified scripts file and compiled CSS file are what is loaded on the page by default.
+
+At this point, the page is ready to go and you can begin to add your own information and make any needed changes. The sections below  contains a quick breakdown of each of the default sections and how they work.
+
+### Using The Template As Is
+
+If you wish to use the template as is (i.e. how it's seen in the demo), then all that's required is the `css`, `images`, `js`, `libs` folders and the `index.html` file. You would then add your content to `index.html` as needed and you're good to go!
 
 ## Customization and Editing
 
@@ -45,11 +75,35 @@ $text: #74808a;
 
 If you wish to change the general colour scheme of the page for example, simply change the value of `$base-color`.
 
-There is also a number of default CSS classes that can be applied such as `.shadow`, `.shadow-large`, `.btn-rounded-white`, and various others. These can be found under the General Styles section in the stylesheet.
+There is also a number of default CSS classes that can be applied such as `.shadow`, `.shadow-large`, `.btn-rounded-white`, and various others. These can be found under the General Styles section in the style sheet.
+
+### Images
+
+By default, the template comes with a number of images, some of which can be kept and others which act simply as placeholders and should be switched. The template contains the following:
+
+* Main background (images/lead-bg.jpg) - this is the main background image provided via [Unsplash](https://unsplash.com/). This can be kept or changed easily by replacing `images/lead-bg.jpg` with your new background (recommended size of at least 1920x1080).
+* Favicon (/favicon.ico) - this is the favicon used for the page. Similar to the main bg, this can kept or changed easily by replacing the `favicon.ico` with your new one.
+* Project image - these are the images associated with the projects under the project section. These are simply placeholders and should either be replaced or removed.
 
 ### Header Section
 
 The header section can be found within the `<header>` tag and simply contains an unordered list of anchors to different sections of the page. If you add a new section and want to be able to quickly navigate to it from the top, simply add another list element with an anchor that has the href of the ID of the section. Conversely, if you remove a section, don't forget to remove the associated navigation element.
+
+If you wish to add a header link to an external page, simply add the class `no-scroll` to the anchor. For example:
+
+```HTML
+<li>
+    <a href="https://google.com" class="no-scroll">Google</a>
+</li>
+```
+
+If you wish to have a sticky (fixed) header, you simply need to add a class of `sticky` to the main header. For example, that would be accomplished as follows:
+
+```HTML
+<header class="sticky">
+    <!-- Header content -->
+</header>
+```
 
 ### Lead Section
 
@@ -71,8 +125,8 @@ The default format is as follows:
         <h3>Employer Name</h3>
         <h4>Job Title</h4>
         <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-       </p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
+        </p>
     </div>
 </div>
 ```
@@ -87,12 +141,12 @@ The Education is just a series of `.education-block` classes with some details a
 
 ```HTML
 <div class="education-block">
-	<h3>University of Ottawa</h3>
-	<span class="education-date">Sept 2016 - Sept 2017</span>
-	<h4>Bachelor of Science in Computer Science</h4>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-	</p>
+    <h3>University of Ottawa</h3>
+    <span class="education-date">Sept 2016 - Sept 2017</span>
+    <h4>Bachelor of Science in Computer Science</h4>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
+    </p>
 </div>
 ```
 
@@ -104,32 +158,33 @@ The Project section contains a number of `.project` elements that represent each
 
 ```HTML
 <div class="project">
-	<div class="project-image">
-		<img src="images/project.jpg" />
-	</div>
-	<!-- End .project-image -->
-	<div class="project-info">
-		<h3>Project Name Here</h3>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-		</p>
-		<a href="#">View Project</a>
-	</div>
-	<!-- End .project-info -->
+    <div class="project-image">
+        <img src="images/project.jpg" />
+    </div>
+    <!-- End .project-image -->
+
+    <div class="project-info">
+        <h3>Project Name Here</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
+        </p>
+        <a href="#">View Project</a>
+    </div>
+    <!-- End .project-info -->
 </div>
 ```
 
 ### Skills Section
 
-The Skills section is simply an unordered list that spits out a "Skill Cloud" with all the skills listed. To add / remove skills, simply edit or add list elements.
+The Skills section is simply an unordered list that spits out a "Skill Cloud" with all the skills listed. To add / remove skills, simply edit or add list elements, like so:
 
 ```HTML
 <ul>
-	<li>JavaScript</li>
-	<li>Python</li>
-	<li>Ruby</li>
-	<li>Go</li>
-	<li>Node.js</li>
+    <li>JavaScript</li>
+    <li>Python</li>
+    <li>Ruby</li>
+    <li>Go</li>
+    <li>Node.js</li>
 </ul>
 ```
 
@@ -139,19 +194,33 @@ Since the page is static, I opted to use the awesome Formspree to allow for a co
 
 ```HTML
 <form method="POST" action="https://formspree.io/email@email.com">
-	<input type="hidden" name="_subject" value="Contact request from personal website" />
-	<input type="email" name="_replyto" placeholder="Your email" required>
-	<textarea name="message" placeholder="Your message" required></textarea>
-	<button type="submit">Send</button>
+    <input type="hidden" name="_subject" value="Contact request from personal website" />
+    <input type="email" name="_replyto" placeholder="Your email" required>
+    <textarea name="message" placeholder="Your message" required></textarea>
+    <button type="submit">Send</button>
 </form>
 ```
 For more information on configuration of the contact form or dealing with errors, check out [Formspree](https://formspree.io/).
+
+For a quick tutorial about formspree, check out this [tutsplus tutorial](https://webdesign.tutsplus.com/tutorials/quick-tip-add-a-formspree-form-to-your-static-sites--cms-23870) that covers different aspects and features of the form tool.
 
 ### Footer Section
 
 The Footer contains an optional copyright where you can place your name as well as an unordered list of all of your social or coding related profiles. By default it contains Github, Stack Overflow, Facebook, Twitter, and Google Plus. You can add or remove them easily and simply use the Font Awesome icon associated with the social profile you wish to use. For a list of all icons, [click here](http://fontawesome.io/icons/).
 
 ## Changelog
+
+### 1.1.3
+
+* Added default favicon to be used or changed
+* Added `sticky` class to make header fixed
+* Updated docs to add image section
+
+### 1.1.2
+
+* Added `no-scroll` class option to header navigation anchor if you want to link to external site
+* Changed contact form input / textarea colours to be based off `$base-color`
+* Changed main background to 100vh so it doesn't overflow if viewport height < 700px
 
 ### 1.1.1
 
@@ -167,4 +236,4 @@ The Footer contains an optional copyright where you can place your name as well 
 
 ## License
 
-Completely free (MIT)! See LICENSE.md for more.
+Completely free (MIT)! See [LICENSE.md](LICENSE.md) for more.

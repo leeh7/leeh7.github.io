@@ -1,7 +1,10 @@
-/*
+/*!
     Title: Dev Portfolio Template
-    Version: 1.1.1
-    Last Change: 03/19/17
+    Version: 1.1.3
+    Last Change: 03/25/17
+    Author: Ryan Fitzgerald
+    Repo: https://github.com/RyanFitzgerald/devportfolio-template
+    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
 
     Description: This file contains all the scripts associated with the single-page
     portfolio website.
@@ -14,6 +17,10 @@
 
     // Animate to section when nav is clicked
     $('header a').click(function(e) {
+
+        // Treat as normal link if no-scroll class
+        if ($(this).hasClass('no-scroll')) return;
+
         e.preventDefault();
         var heading = $(this).attr('href');
         var scrollDistance = $(heading).offset().top;
