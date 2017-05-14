@@ -584,6 +584,7 @@ footer {
         font-size: 0.9em;
         margin: 0;
     }
+    //hanging indent for styling bullet points
     ul {
         list-style:none;
         margin: 0;
@@ -592,6 +593,7 @@ footer {
     li {
         text-indent: -20px;
     }
+    //end of hanging indent
 }
 
 .vtimeline-point {
