@@ -587,6 +587,7 @@ footer {
     //hanging indent for styling bullet points
     ul {
         //list-style:none;
+        list-style-position: inside;
         margin: 0;
         padding-left: 40px;
     }
