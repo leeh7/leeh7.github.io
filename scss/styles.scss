@@ -516,14 +516,14 @@ footer {
     h2 {
         color: $heading;
     }
-    ul {
-        list-style:none;
-        margin: 0;
-        padding-left: 40px;
-    }
-    li {
-        text-indent: -20px;
-    }
+    // ul {
+    //     list-style:none;
+    //     margin: 0;
+    //     padding-left: 40px;
+    // }
+    // li {
+    //     text-indent: -20px;
+    // }
 }
 
 #experience-timeline {
@@ -585,15 +585,15 @@ footer {
         margin: 0;
     }
     //hanging indent for styling bullet points
-    ul {
-        //list-style:none;
-        list-style-position: inside;
-        margin: 0;
-        padding-left: 40px;
-    }
-    li {
-        text-indent: -10px;
-    }
+    // ul {
+    //     //list-style:none;
+    //     list-style-position: inside;
+    //     margin: 0;
+    //     //padding-left: 40px;
+    // }
+    // li {
+    //     text-indent: -10px;
+    // }
     //end of hanging indent
 }
 
