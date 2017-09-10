@@ -30,7 +30,6 @@ To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio-
     - [Contact Section](#contact-section)
     - [Footer Section](#footer-section)
     - [Optional Sections](#optional-sections)
-
 - [Changelog](#changelog)
 - [License](#license)
 
@@ -301,8 +300,6 @@ You can copy .optional-section-block for each new item you wish you have in the 
 The optional section blocks have styling for h3 (the block title), h4, p, and ul tags by default.
 
 ## Changelog
-=======
-=======
 
 ### 1.2.1
 
