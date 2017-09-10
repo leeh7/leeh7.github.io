@@ -29,10 +29,8 @@ To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio-
     - [Skills Section](#skills-section)
     - [Contact Section](#contact-section)
     - [Footer Section](#footer-section)
-<<<<<<< HEAD
-=======
     - [Optional Sections](#optional-sections)
->>>>>>> RyanFitzgerald/master
+
 - [Changelog](#changelog)
 - [License](#license)
 
@@ -303,23 +301,19 @@ You can copy .optional-section-block for each new item you wish you have in the 
 The optional section blocks have styling for h3 (the block title), h4, p, and ul tags by default.
 
 ## Changelog
+=======
+=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 ### 1.2.1
 
 * Updated dependencies and gulpfile
 * Added `no-image` optional class for projects without images (see above for usage)
 
->>>>>>> RyanFitzgerald/master
 ### 1.2.0
 
 * Added support for optional "Show More Projects" that hides some projects by default if included
 * Added optional sections to display certifications, languages, etc.
 
->>>>>>> RyanFitzgerald/master
 ### 1.1.3
 
 * Added default favicon to be used or changed
