@@ -1,11 +1,16 @@
 /*!
     Title: Dev Portfolio Template
 <<<<<<< HEAD
+<<<<<<< HEAD
     Version: 1.1.3
     Last Change: 03/25/17
 =======
     Version: 1.2.0
     Last Change: 05/20/17
+>>>>>>> RyanFitzgerald/master
+=======
+    Version: 1.2.1
+    Last Change: 08/27/2017
 >>>>>>> RyanFitzgerald/master
     Author: Ryan Fitzgerald
     Repo: https://github.com/RyanFitzgerald/devportfolio-template
